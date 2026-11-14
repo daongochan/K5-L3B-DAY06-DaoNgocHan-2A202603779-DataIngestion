@@ -1,0 +1,407 @@
+{
+  "benchmark_version": 1,
+  "document_id": "nghi-dinh-13-2023-nd-cp",
+  "corpus_sha256": "5b026143b56779199603a164260cc76533a816b9c851a4c769e16a55ef7d6e6f",
+  "created_at": "2026-11-14T04:30:00Z",
+  "frozen_before_runs": true,
+  "frozen_note": "22 câu được viết và kiểm chứng evidence TRƯỚC khi chạy bất kỳ chiến lược nào. Không sửa câu hỏi, nhãn hay split sau khi xem kết quả; nếu phát hiện lỗi nhãn, ghi vào results/benchmark_issues.md và giữ nguyên để so sánh công bằng.",
+  "page_convention": "physical_page là số trang vật lý của PDF (1-37), khớp DocumentPage.page. printed_page là số trang in trên Công báo.",
+  "split_policy": {
+    "dev": 16,
+    "test": 6,
+    "rationale": "Dev bao phủ Chương I-II (quyền, đồng ý, thời hạn xử lý) và Phụ lục Mẫu 01-02. Test giữ các chủ đề chưa dùng để chỉnh: bồi thường thiệt hại, ngoại lệ xóa dữ liệu, trách nhiệm Bên Xử lý, chuyển dữ liệu ra nước ngoài, Mẫu 06, trách nhiệm theo Điều 38.",
+    "leak_risk": "Cùng một văn bản nên dev và test chia sẻ từ vựng pháp lý và mẫu câu. Chỉ một trang gold bị dùng chung giữa dev và test: p8 (D04 hỏi hạn chế xử lý, T01 hỏi bồi thường), khác evidence và khác điều. Rủi ro rò rỉ do tái dùng trang là thấp và không tái dùng evidence.",
+    "no_tuning_on_test": "Mọi tham số A/B/C và tiêu chí chọn chiến lược được chốt trên dev; test chỉ chạy một lần sau khi đã cố định cấu hình."
+  },
+  "selection_criteria_precommitted": [
+    "Ưu tiên 1: Evidence Hit@3 trên dev (khả năng tìm thấy bằng chứng, không chỉ đúng trang).",
+    "Ưu tiên 2: Grounding trung bình trên dev khi top-3 đủ để trả lời.",
+    "Ưu tiên 3: Chunk coherence trung bình, vì chunk vụn làm grounding giảm dù Hit@3 cao.",
+    "Ưu tiên 4: Tài nguyên (số chunk, thời gian ingest).",
+    "Tiêu chí loại: cấu hình có filter tuân thủ < 100% trên các câu có filter bị loại, vì trả về nguồn ngoài phạm vi yêu cầu là lỗi sai."
+  ],
+  "filter_fields": {
+    "page_type": {
+      "type": "enum",
+      "source": "starter/src/ingestion.py:_page_type, suy ra từ vị trí 'Phụ lục' trong văn bản",
+      "values": [
+        "noi_dung",
+        "phu_luc_bieu_mau",
+        "phu_luc_muc_luc"
+      ],
+      "why_useful": "Thân nghị định trích dẫn tên 'Mẫu số 01', 'Mẫu số 03', 'Mẫu số 06' khi quy định thủ tục, nên truy vấn về một biểu mẫu cụ thể bị nhiễu bởi trang quy định. Lọc page_type=phu_luc_bieu_mau loại đúng loại nhiễu này."
+    },
+    "article": {
+      "type": "string",
+      "source": "starter/results/structure.json, trích từ tiêu đề 'Điều N.' trong văn bản",
+      "values": "Điều 1 - Điều 44",
+      "why_useful": "Câu hỏi nêu rõ 'theo Điều N' cần giới hạn trong đúng điều; không lọc thì các điều lân cận có cùng từ vựng (trách nhiệm, thông báo, thời hạn) chiếm top-3."
+    }
+  },
+  "questions": [
+    {
+      "id": "D01",
+      "split": "dev",
+      "kind": "direct",
+      "question": "Nghị định 13/2023/NĐ-CP có hiệu lực thi hành từ ngày nào?",
+      "answer": "Từ ngày 01 tháng 7 năm 2023.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 29,
+          "printed_page": 31,
+          "article": "Điều 43",
+          "evidence": "Nghị định này có hiệu lực thi hành từ ngày 01 tháng 7 năm 2023."
+        }
+      ]
+    },
+    {
+      "id": "D02",
+      "split": "dev",
+      "kind": "direct",
+      "question": "Dữ liệu cá nhân nhạy cảm được định nghĩa như thế nào?",
+      "answer": "Là dữ liệu cá nhân gắn liền với quyền riêng tư của cá nhân mà khi bị xâm phạm sẽ gây ảnh hưởng trực tiếp tới quyền và lợi ích hợp pháp của cá nhân.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 3,
+          "printed_page": 5,
+          "article": "Điều 2",
+          "evidence": "Dữ liệu cá nhân nhạy cảm là dữ liệu cá nhân gắn liền với quyền riêng tư của cá nhân mà khi bị xâm phạm sẽ gây ảnh hưởng trực tiếp tới quyền và lợi ích hợp pháp của cá nhân"
+        }
+      ]
+    },
+    {
+      "id": "D03",
+      "split": "dev",
+      "kind": "direct",
+      "question": "Theo nguyên tắc bảo vệ dữ liệu cá nhân, dữ liệu cá nhân có được mua bán không?",
+      "answer": "Không. Dữ liệu cá nhân không được mua, bán dưới mọi hình thức, trừ trường hợp luật có quy định khác.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 5,
+          "printed_page": 7,
+          "article": "Điều 3",
+          "evidence": "Dữ liệu cá nhân không được mua, bán dưới mọi hình thức, trừ trường hợp luật có quy định khác."
+        }
+      ]
+    },
+    {
+      "id": "D04",
+      "split": "dev",
+      "kind": "direct",
+      "question": "Khi chủ thể dữ liệu yêu cầu hạn chế xử lý, việc hạn chế phải được thực hiện trong bao lâu?",
+      "answer": "Trong 72 giờ sau khi có yêu cầu của chủ thể dữ liệu.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 8,
+          "printed_page": 10,
+          "article": "Điều 9",
+          "evidence": "Việc hạn chế xử lý dữ liệu được thực hiện trong 72 giờ sau khi có yêu cầu của chủ thể dữ liệu"
+        }
+      ]
+    },
+    {
+      "id": "D05",
+      "split": "dev",
+      "kind": "rephrased",
+      "question": "Sau khi người dùng gửi yêu cầu xóa dữ liệu, doanh nghiệp có bao nhiêu thời gian để thực hiện?",
+      "answer": "72 giờ sau khi có yêu cầu của chủ thể dữ liệu.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 15,
+          "printed_page": 17,
+          "article": "Điều 16",
+          "evidence": "Việc xóa dữ liệu được thực hiện trong 72 giờ sau khi có yêu cầu của chủ thể dữ liệu"
+        }
+      ]
+    },
+    {
+      "id": "D06",
+      "split": "dev",
+      "kind": "conditional",
+      "question": "Nếu chủ thể dữ liệu không phản hồi yêu cầu xin đồng ý thì có được coi là đã đồng ý không?",
+      "answer": "Không. Sự im lặng hoặc không phản hồi không được coi là sự đồng ý.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 10,
+          "printed_page": 12,
+          "article": "Điều 11",
+          "evidence": "Sự im lặng hoặc không phản hồi của chủ thể dữ liệu không được coi là sự đồng ý."
+        }
+      ]
+    },
+    {
+      "id": "D07",
+      "split": "dev",
+      "kind": "conditional",
+      "question": "Khi xử lý dữ liệu cá nhân của trẻ em, từ độ tuổi nào thì bản thân trẻ em cũng phải đồng ý?",
+      "answer": "Trẻ em từ đủ 7 tuổi trở lên phải có sự đồng ý của trẻ em, ngoài sự đồng ý của cha, mẹ hoặc người giám hộ.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 17,
+          "printed_page": 19,
+          "article": "Điều 20",
+          "evidence": "Việc xử lý dữ liệu cá nhân của trẻ em phải có sự đồng ý của trẻ em trong trường hợp trẻ em từ đủ 7 tuổi trở lên"
+        }
+      ]
+    },
+    {
+      "id": "D08",
+      "split": "dev",
+      "kind": "direct",
+      "question": "Khi phát hiện vi phạm quy định bảo vệ dữ liệu cá nhân, phải thông báo cho cơ quan nào và trong thời hạn bao lâu?",
+      "answer": "Thông báo cho Bộ Công an (Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao) chậm nhất 72 giờ sau khi xảy ra hành vi vi phạm.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 18,
+          "printed_page": 20,
+          "article": "Điều 23",
+          "evidence": "thông báo cho Bộ Công an (Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao) chậm nhất 72 giờ sau khi xảy ra hành vi vi phạm"
+        }
+      ]
+    },
+    {
+      "id": "D09",
+      "split": "dev",
+      "kind": "rephrased",
+      "question": "Hồ sơ đánh giá tác động xử lý dữ liệu cá nhân phải gửi cho Bộ Công an trong thời hạn bao nhiêu ngày?",
+      "answer": "Trong thời gian 60 ngày kể từ ngày tiến hành xử lý dữ liệu cá nhân.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 20,
+          "printed_page": 22,
+          "article": "Điều 24",
+          "evidence": "01 bản chính theo Mẫu số 04 tại Phụ lục của Nghị định này trong thời gian 60 ngày kể từ ngày tiến hành xử lý dữ liệu cá nhân"
+        }
+      ]
+    },
+    {
+      "id": "D10",
+      "split": "dev",
+      "kind": "rephrased",
+      "question": "Doanh nghiệp nhỏ mới thành lập được miễn chỉ định bộ phận bảo vệ dữ liệu cá nhân trong bao lâu?",
+      "answer": "02 năm đầu kể từ khi thành lập doanh nghiệp.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 29,
+          "printed_page": 31,
+          "article": "Điều 43",
+          "evidence": "được quyền lựa chọn miễn trừ quy định về chỉ định cá nhân và bộ phận bảo vệ dữ liệu cá nhân trong thời gian 02 năm đầu kể từ khi thành lập doanh nghiệp"
+        }
+      ]
+    },
+    {
+      "id": "D11",
+      "split": "dev",
+      "kind": "conditional",
+      "question": "Doanh nghiệp nhỏ trực tiếp kinh doanh hoạt động xử lý dữ liệu cá nhân có được hưởng miễn trừ 02 năm không?",
+      "answer": "Không. Các doanh nghiệp trực tiếp kinh doanh hoạt động xử lý dữ liệu cá nhân không áp dụng quy định miễn trừ đó.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 29,
+          "printed_page": 31,
+          "article": "Điều 43",
+          "evidence": "Các doanh nghiệp siêu nhỏ, doanh nghiệp nhỏ, doanh nghiệp vừa, doanh nghiệp khởi nghiệp trực tiếp kinh doanh hoạt động xử lý dữ liệu cá nhân không áp dụng quy định tại khoản 2 Điều này."
+        }
+      ]
+    },
+    {
+      "id": "D12",
+      "split": "dev",
+      "kind": "direct",
+      "question": "Cơ quan chuyên trách bảo vệ dữ liệu cá nhân là cơ quan nào?",
+      "answer": "Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao - Bộ Công an.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 24,
+          "printed_page": 26,
+          "article": "Điều 29",
+          "evidence": "Cơ quan chuyên trách bảo vệ dữ liệu cá nhân là Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao - Bộ Công an"
+        }
+      ]
+    },
+    {
+      "id": "D13",
+      "split": "dev",
+      "kind": "conditional",
+      "question": "Nếu chủ thể dữ liệu rút lại sự đồng ý thì việc xử lý đã thực hiện trước đó có bị coi là trái pháp luật không?",
+      "answer": "Không. Việc rút lại sự đồng ý không ảnh hưởng đến tính hợp pháp của việc xử lý dữ liệu đã được đồng ý trước khi rút lại.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 10,
+          "printed_page": 12,
+          "article": "Điều 12",
+          "evidence": "Việc rút lại sự đồng ý không ảnh hưởng đến tính hợp pháp của việc xử lý dữ liệu đã được đồng ý trước khi rút lại sự đồng ý."
+        }
+      ]
+    },
+    {
+      "id": "D14",
+      "split": "dev",
+      "kind": "rephrased",
+      "question": "Chủ thể dữ liệu yêu cầu được cấp bản sao dữ liệu của mình thì phải được cung cấp trong bao lâu?",
+      "answer": "Trong 72 giờ sau khi có yêu cầu của chủ thể dữ liệu.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 12,
+          "printed_page": 14,
+          "article": "Điều 14",
+          "evidence": "Việc cung cấp dữ liệu cá nhân của chủ thể dữ liệu được Bên Kiểm soát dữ liệu cá nhân, Bên Kiểm soát và xử lý dữ liệu cá nhân thực hiện trong 72 giờ sau khi có yêu cầu của chủ thể dữ liệu"
+        }
+      ]
+    },
+    {
+      "id": "D15",
+      "split": "dev",
+      "kind": "direct",
+      "question": "Mẫu số 01 tại Phụ lục của Nghị định là phiếu dành cho đối tượng nào?",
+      "answer": "Phiếu yêu cầu cung cấp dữ liệu cá nhân dành cho cá nhân.",
+      "filter": {
+        "page_type": "phu_luc_bieu_mau"
+      },
+      "filter_reason": "Câu hỏi nêu 'tại Phụ lục', giới hạn vào phần biểu mẫu. Không lọc thì Điều 14 ở trang 12 (thân nghị định) cũng nhắc 'Mẫu số 01, 02' và lấn top-3.",
+      "gold": [
+        {
+          "physical_page": 31,
+          "printed_page": 33,
+          "article": "Phụ lục - Mẫu số 01",
+          "evidence": "PHIẾU YÊU CẦU CUNG CẤP DỮ LIỆU CÁ NHÂN (Dành cho cá nhân)"
+        }
+      ]
+    },
+    {
+      "id": "D16",
+      "split": "dev",
+      "kind": "direct",
+      "question": "Mẫu số 02 tại Phụ lục dành cho tổ chức, doanh nghiệp có tiêu đề là gì?",
+      "answer": "Phiếu yêu cầu cung cấp dữ liệu cá nhân (Dành cho tổ chức, doanh nghiệp).",
+      "filter": {
+        "page_type": "phu_luc_bieu_mau"
+      },
+      "filter_reason": "Câu hỏi nêu 'tại Phụ lục'. Thân nghị định ở trang 12 cũng nhắc 'Mẫu số 01, 02' nên cần lọc để loại trang quy định.",
+      "gold": [
+        {
+          "physical_page": 32,
+          "printed_page": 34,
+          "article": "Phụ lục - Mẫu số 02",
+          "evidence": "PHIẾU YÊU CẦU CUNG CẤP DỮ LIỆU CÁ NHÂN (Dành cho tổ chức, doanh nghiệp)"
+        }
+      ]
+    },
+    {
+      "id": "T01",
+      "split": "test",
+      "kind": "direct",
+      "question": "Chủ thể dữ liệu có quyền yêu cầu bồi thường thiệt hại khi bị vi phạm quy định bảo vệ dữ liệu cá nhân không?",
+      "answer": "Có, theo quy định của pháp luật, trừ trường hợp các bên có thỏa thuận khác hoặc luật có quy định khác.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 8,
+          "printed_page": 10,
+          "article": "Điều 9",
+          "evidence": "Chủ thể dữ liệu có quyền yêu cầu bồi thường thiệt hại theo quy định của pháp luật khi xảy ra vi phạm quy định về bảo vệ dữ liệu cá nhân của mình"
+        }
+      ]
+    },
+    {
+      "id": "T02",
+      "split": "test",
+      "kind": "conditional",
+      "question": "Dữ liệu cá nhân đã được công khai theo quy định của pháp luật có bị xóa khi chủ thể dữ liệu yêu cầu không?",
+      "answer": "Không. Việc xóa dữ liệu không áp dụng khi dữ liệu cá nhân đã được công khai theo quy định của pháp luật.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 14,
+          "printed_page": 16,
+          "article": "Điều 16",
+          "evidence": "Việc xóa dữ liệu sẽ không áp dụng khi có đề nghị của chủ thể dữ liệu trong các trường hợp"
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "split": "test",
+      "kind": "rephrased",
+      "question": "Khi hợp đồng xử lý dữ liệu kết thúc, bên xử lý dữ liệu có được giữ lại dữ liệu cá nhân không?",
+      "answer": "Không. Bên Xử lý dữ liệu cá nhân phải xóa, trả lại toàn bộ dữ liệu cá nhân cho Bên Kiểm soát dữ liệu cá nhân sau khi kết thúc xử lý.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 28,
+          "printed_page": 30,
+          "article": "Điều 39",
+          "evidence": "Xóa, trả lại toàn bộ dữ liệu cá nhân cho Bên Kiểm soát dữ liệu cá nhân sau khi kết thúc xử lý dữ liệu."
+        }
+      ]
+    },
+    {
+      "id": "T04",
+      "split": "test",
+      "kind": "direct",
+      "question": "Mẫu số 06 tại Phụ lục là hồ sơ đánh giá tác động cho hoạt động nào?",
+      "answer": "Hồ sơ đánh giá tác động chuyển dữ liệu cá nhân ra nước ngoài.",
+      "filter": {
+        "page_type": "phu_luc_bieu_mau"
+      },
+      "filter_reason": "Câu hỏi nêu 'tại Phụ lục'. Điều 25 ở trang 22 cũng nhắc 'Mẫu số 06' nên nếu không lọc, trang quy định có thể đứng trước trang biểu mẫu thật.",
+      "gold": [
+        {
+          "physical_page": 37,
+          "printed_page": 39,
+          "article": "Phụ lục - Mẫu số 06",
+          "evidence": "HỒ SƠ ĐÁNH GIÁ TÁC ĐỘNG CHUYỂN DỮ LIỆU CÁ NHÂN"
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "split": "test",
+      "kind": "direct",
+      "question": "Bộ Công an kiểm tra việc chuyển dữ liệu cá nhân ra nước ngoài bao nhiêu lần một năm?",
+      "answer": "01 lần/năm, trừ trường hợp phát hiện vi phạm hoặc để xảy ra sự cố lộ, mất dữ liệu cá nhân của công dân Việt Nam.",
+      "filter": null,
+      "gold": [
+        {
+          "physical_page": 22,
+          "printed_page": 24,
+          "article": "Điều 25",
+          "evidence": "Bộ Công an quyết định việc kiểm tra chuyển dữ liệu cá nhân ra nước ngoài 01 lần/năm"
+        }
+      ]
+    },
+    {
+      "id": "T06",
+      "split": "test",
+      "kind": "rephrased",
+      "question": "Theo Điều 38, Bên Kiểm soát dữ liệu cá nhân có trách nhiệm gì về nhật ký hệ thống?",
+      "answer": "Phải ghi lại và lưu trữ nhật ký hệ thống quá trình xử lý dữ liệu cá nhân.",
+      "filter": {
+        "article": "Điều 38"
+      },
+      "filter_reason": "Câu hỏi nêu rõ 'Theo Điều 38'. Không lọc, các Điều 39-42 cũng nói về trách nhiệm và dùng cùng từ vựng nên dễ chiếm top-3.",
+      "gold": [
+        {
+          "physical_page": 27,
+          "printed_page": 29,
+          "article": "Điều 38",
+          "evidence": "Ghi lại và lưu trữ nhật ký hệ thống quá trình xử lý dữ liệu cá nhân."
+        }
+      ]
+    }
+  ]
+}

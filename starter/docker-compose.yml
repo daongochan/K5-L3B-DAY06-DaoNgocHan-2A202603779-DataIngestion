@@ -6,7 +6,12 @@ services:
       POSTGRES_USER: day6
       POSTGRES_PASSWORD: day6_local_only
     ports:
-      - "127.0.0.1:55433:5432"
+      # 55433 is the starter default and matches DATABASE_URL in .env.example, so a
+      # fresh clone works without edits. On Windows, Hyper-V can reserve the
+      # 55425-55624 range after a reboot and make the bind fail with "socket access
+      # permissions"; in that case set DAY6_PG_PORT in starter/.env (e.g. 5433) and
+      # use the same port in DATABASE_URL.
+      - "127.0.0.1:${DAY6_PG_PORT:-55433}:5432"
     volumes:
       - pg_data:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/01-vector.sql:ro

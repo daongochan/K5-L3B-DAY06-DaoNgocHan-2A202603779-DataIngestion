@@ -4,6 +4,53 @@
 
 Biến tài liệu thành kho tri thức có thể truy xuất cho AI agent, rồi đo xem cách chuẩn bị dữ liệu nào hiệu quả nhất.
 
+## Bài nộp của Đào Ngọc Hân (2A202603779 · L3B)
+
+Corpus: **Nghị định 13/2023/NĐ-CP** về bảo vệ dữ liệu cá nhân (Công báo số 685 + 686 ngày 30-4-2023), 37 trang PDF, 36 trang nội dung.
+
+| Thành phần | Đường dẫn |
+|---|---|
+| Thông tin học viên | [STUDENT.md](STUDENT.md) |
+| Báo cáo cá nhân | [report/individual/2A202603779_DaoNgocHan.md](report/individual/2A202603779_DaoNgocHan.md) |
+| Manifest corpus (nguồn, quyền, trang, sha256) | [data/manifest.json](data/manifest.json) |
+| Benchmark 22 câu + gold | [benchmark/](benchmark/) |
+| Nhật ký thí nghiệm A/B/C | [artifacts/experiment_log.csv](artifacts/experiment_log.csv) |
+| Corpus PDF | `starter/data/nghi_dinh_13_2023_nd_cp.pdf` |
+| Kết quả, trace, nhãn audit | [starter/results/](starter/results/) |
+
+### Chạy lại từ đầu
+
+```powershell
+# 1) Môi trường Python (dùng .venv ở repo root)
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r starter\requirements.txt
+
+# 2) Database: PostgreSQL 16 + pgvector 0.8.7
+cd starter
+Copy-Item .env.example .env
+docker compose -p day6_student_starter up -d --wait
+..\.venv\Scripts\python.exe scripts\check_setup.py
+
+# 3) Toàn bộ pipeline (10 bước), in bảng Hit@1/Hit@3
+..\.venv\Scripts\python.exe -m src.run
+```
+
+`src.run` dừng và trả mã lỗi nếu bất kỳ bước nào fail; không có fallback sang vector mock. Chi tiết từng bước và cách chạy riêng lẻ: [starter/README.md](starter/README.md).
+
+### Kết quả chính (top-3, `intfloat/multilingual-e5-base`, pgvector cosine)
+
+| Chiến lược | dev Hit@1 | dev Hit@3 | test Hit@1 | test Hit@3 |
+|---|---|---|---|---|
+| A_fixed (500/150) | 12/16 | 16/16 | 5/6 | 5/6 |
+| B_para (700 + breadcrumb) | 15/16 | 16/16 | 6/6 | 6/6 |
+| C_para_filter (= B + filter) | 15/16 | 16/16 | 6/6 | 6/6 |
+
+Chọn **B_para**, dùng **C_para_filter** khi câu hỏi cung cấp được filter. Lý do và đánh đổi trong báo cáo cá nhân.
+
+---
+
+## Mô tả đề bài
+
 | 📄 Dữ liệu | 🧩 Chiến lược | 🎯 Benchmark |
 |---|---|---|
 | Tối thiểu **30 trang nội dung** | Tối thiểu **3 cấu hình** | Tối thiểu **20 câu hỏi** |

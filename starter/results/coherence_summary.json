@@ -1,0 +1,43 @@
+{
+  "samples": 10,
+  "A_fixed": {
+    "scores": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      1
+    ],
+    "mean": 1.4,
+    "count_0": 0,
+    "count_1": 6,
+    "count_2": 4
+  },
+  "B_para": {
+    "scores": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "mean": 2.0,
+    "count_0": 0,
+    "count_1": 0,
+    "count_2": 10
+  },
+  "scorer": "tác giả (Đào Ngọc Hân) — tự chấm, có nguy cơ thiên lệch",
+  "positions_frozen_before_scoring": true,
+  "artifact": "starter/results/coherence_samples.csv",
+  "generator": "starter/scripts/label_coherence.py"
+}

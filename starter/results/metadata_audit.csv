@@ -1,0 +1,55 @@
+strategy,question_id,rank,chunk_id,page,printed_page,metadata_article,true_article,metadata_form,true_form,page_type,source_ok,page_ok,printed_page_ok,page_type_ok,article_ok,form_ok,all_ok,note,hit
+A_fixed,T01,1,nghi-dinh-13-2023-nd-cp:p008:A_fixed:004,8,10,Điều 9,Điều 9,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1387,True
+A_fixed,T01,2,nghi-dinh-13-2023-nd-cp:p008:A_fixed:003,8,10,Điều 9,Điều 9,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1040,False
+A_fixed,T01,3,nghi-dinh-13-2023-nd-cp:p028:A_fixed:000,28,30,Điều 38,Điều 38,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 0,False
+A_fixed,T02,1,nghi-dinh-13-2023-nd-cp:p014:A_fixed:003,14,16,Điều 16,Điều 16,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1042,True
+A_fixed,T02,2,nghi-dinh-13-2023-nd-cp:p014:A_fixed:004,14,16,Điều 16,Điều 16,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1389,False
+A_fixed,T02,3,nghi-dinh-13-2023-nd-cp:p015:A_fixed:001,15,17,Điều 16,Điều 16,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 347,False
+A_fixed,T03,1,nghi-dinh-13-2023-nd-cp:p005:A_fixed:002,5,7,Điều 3,Điều 3,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 693,False
+A_fixed,T03,2,nghi-dinh-13-2023-nd-cp:p028:A_fixed:001,28,30,Điều 39,Điều 39,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 348,False
+A_fixed,T03,3,nghi-dinh-13-2023-nd-cp:p014:A_fixed:003,14,16,Điều 16,Điều 16,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1042,False
+A_fixed,T04,1,nghi-dinh-13-2023-nd-cp:p037:A_fixed:000,37,39,,,Mẫu số 06,Mẫu số 06,phu_luc_bieu_mau,True,True,True,True,True,True,True,chunk starts at offset 0,True
+A_fixed,T04,2,nghi-dinh-13-2023-nd-cp:p019:A_fixed:001,19,21,Điều 23,Điều 23,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 346,False
+A_fixed,T04,3,nghi-dinh-13-2023-nd-cp:p033:A_fixed:001,33,35,,,Mẫu số 03,Mẫu số 03,phu_luc_bieu_mau,True,True,True,True,True,True,True,chunk starts at offset 325,False
+A_fixed,T05,1,nghi-dinh-13-2023-nd-cp:p022:A_fixed:003,22,24,Điều 25,Điều 25,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1041,True
+A_fixed,T05,2,nghi-dinh-13-2023-nd-cp:p022:A_fixed:004,22,24,Điều 25,Điều 25,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1388,False
+A_fixed,T05,3,nghi-dinh-13-2023-nd-cp:p022:A_fixed:000,22,24,Điều 25,Điều 25,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 0,False
+A_fixed,T06,1,nghi-dinh-13-2023-nd-cp:p027:A_fixed:003,27,29,Điều 37,Điều 37,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1044,True
+A_fixed,T06,2,nghi-dinh-13-2023-nd-cp:p027:A_fixed:004,27,29,Điều 38,Điều 38,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1392,True
+A_fixed,T06,3,nghi-dinh-13-2023-nd-cp:p028:A_fixed:003,28,30,Điều 39,Điều 38,,,noi_dung,True,True,True,True,False,True,False,chunk starts at offset 202,False
+B_para,T01,1,nghi-dinh-13-2023-nd-cp:p008:B_para:002,8,10,Điều 9,Điều 9,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1303,True
+B_para,T01,2,nghi-dinh-13-2023-nd-cp:p028:B_para:000,28,30,Điều 38,Điều 38,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 0,False
+B_para,T01,3,nghi-dinh-13-2023-nd-cp:p019:B_para:000,19,21,Điều 23,Điều 23,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 0,False
+B_para,T02,1,nghi-dinh-13-2023-nd-cp:p014:B_para:002,14,16,Điều 16,Điều 16,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1321,True
+B_para,T02,2,nghi-dinh-13-2023-nd-cp:p014:B_para:001,14,16,Điều 16,Điều 16,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 624,False
+B_para,T02,3,nghi-dinh-13-2023-nd-cp:p015:B_para:001,15,17,Điều 16,Điều 16,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 603,False
+B_para,T03,1,nghi-dinh-13-2023-nd-cp:p028:B_para:001,28,30,Điều 39,Điều 39,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 332,True
+B_para,T03,2,nghi-dinh-13-2023-nd-cp:p015:B_para:002,15,17,Điều 16,Điều 16,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1256,False
+B_para,T03,3,nghi-dinh-13-2023-nd-cp:p005:B_para:001,5,7,Điều 3,Điều 3,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 698,False
+B_para,T04,1,nghi-dinh-13-2023-nd-cp:p037:B_para:000,37,39,,,Mẫu số 06,Mẫu số 06,phu_luc_bieu_mau,True,True,True,True,True,True,True,chunk starts at offset 0,True
+B_para,T04,2,nghi-dinh-13-2023-nd-cp:p021:B_para:000,21,23,Điều 24,Điều 24,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 0,False
+B_para,T04,3,nghi-dinh-13-2023-nd-cp:p020:B_para:002,20,22,Điều 24,Điều 24,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1359,False
+B_para,T05,1,nghi-dinh-13-2023-nd-cp:p022:B_para:002,22,24,Điều 25,Điều 25,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1293,True
+B_para,T05,2,nghi-dinh-13-2023-nd-cp:p022:B_para:000,22,24,Điều 25,Điều 25,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 0,False
+B_para,T05,3,nghi-dinh-13-2023-nd-cp:p022:B_para:001,22,24,Điều 25,Điều 25,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 649,False
+B_para,T06,1,nghi-dinh-13-2023-nd-cp:p027:B_para:002,27,29,Điều 38,Điều 38,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1098,True
+B_para,T06,2,nghi-dinh-13-2023-nd-cp:p028:B_para:000,28,30,Điều 38,Điều 38,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 0,False
+B_para,T06,3,nghi-dinh-13-2023-nd-cp:p027:B_para:003,27,29,Điều 38,Điều 38,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1740,False
+C_para_filter,T01,1,nghi-dinh-13-2023-nd-cp:p008:B_para:002,8,10,Điều 9,Điều 9,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1303,True
+C_para_filter,T01,2,nghi-dinh-13-2023-nd-cp:p028:B_para:000,28,30,Điều 38,Điều 38,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 0,False
+C_para_filter,T01,3,nghi-dinh-13-2023-nd-cp:p019:B_para:000,19,21,Điều 23,Điều 23,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 0,False
+C_para_filter,T02,1,nghi-dinh-13-2023-nd-cp:p014:B_para:002,14,16,Điều 16,Điều 16,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1321,True
+C_para_filter,T02,2,nghi-dinh-13-2023-nd-cp:p014:B_para:001,14,16,Điều 16,Điều 16,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 624,False
+C_para_filter,T02,3,nghi-dinh-13-2023-nd-cp:p015:B_para:001,15,17,Điều 16,Điều 16,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 603,False
+C_para_filter,T03,1,nghi-dinh-13-2023-nd-cp:p028:B_para:001,28,30,Điều 39,Điều 39,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 332,True
+C_para_filter,T03,2,nghi-dinh-13-2023-nd-cp:p015:B_para:002,15,17,Điều 16,Điều 16,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1256,False
+C_para_filter,T03,3,nghi-dinh-13-2023-nd-cp:p005:B_para:001,5,7,Điều 3,Điều 3,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 698,False
+C_para_filter,T04,1,nghi-dinh-13-2023-nd-cp:p037:B_para:000,37,39,,,Mẫu số 06,Mẫu số 06,phu_luc_bieu_mau,True,True,True,True,True,True,True,chunk starts at offset 0,True
+C_para_filter,T04,2,nghi-dinh-13-2023-nd-cp:p037:B_para:002,37,39,,,Mẫu số 06,Mẫu số 06,phu_luc_bieu_mau,True,True,True,True,True,True,True,chunk starts at offset 1204,True
+C_para_filter,T04,3,nghi-dinh-13-2023-nd-cp:p035:B_para:000,35,37,,,Mẫu số 04,Mẫu số 04,phu_luc_bieu_mau,True,True,True,True,True,True,True,chunk starts at offset 0,False
+C_para_filter,T05,1,nghi-dinh-13-2023-nd-cp:p022:B_para:002,22,24,Điều 25,Điều 25,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1293,True
+C_para_filter,T05,2,nghi-dinh-13-2023-nd-cp:p022:B_para:000,22,24,Điều 25,Điều 25,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 0,False
+C_para_filter,T05,3,nghi-dinh-13-2023-nd-cp:p022:B_para:001,22,24,Điều 25,Điều 25,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 649,False
+C_para_filter,T06,1,nghi-dinh-13-2023-nd-cp:p027:B_para:002,27,29,Điều 38,Điều 38,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1098,True
+C_para_filter,T06,2,nghi-dinh-13-2023-nd-cp:p028:B_para:000,28,30,Điều 38,Điều 38,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 0,False
+C_para_filter,T06,3,nghi-dinh-13-2023-nd-cp:p027:B_para:003,27,29,Điều 38,Điều 38,,,noi_dung,True,True,True,True,True,True,True,chunk starts at offset 1740,False

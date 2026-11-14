@@ -1,0 +1,13 @@
+{
+  "benchmark_id": 1,
+  "total_questions": 22,
+  "dev": 16,
+  "test": 6,
+  "filter_questions": 4,
+  "filter_questions_test": 2,
+  "gold_entries": 22,
+  "evidence_verified": 22,
+  "problems": [],
+  "warnings": [],
+  "generator": "starter/scripts/verify_benchmark.py"
+}

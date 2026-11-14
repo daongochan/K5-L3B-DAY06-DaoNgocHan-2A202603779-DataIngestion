@@ -1,4 +1,11 @@
-# Core setup and PDF parsing. Choose and install an embedding SDK separately.
+# Core setup and PDF parsing.
 psycopg[binary]==3.3.8
 pypdf>=5,<7
 python-dotenv>=1,<2
+
+# Embedding + vector storage used by this submission (local CPU, no API key).
+# First run downloads the model (~1.1 GB) from Hugging Face.
+sentence-transformers==6.3.0
+torch==2.15.0
+numpy==2.5.4
+pgvector==0.5.1

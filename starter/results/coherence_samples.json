@@ -1,0 +1,70 @@
+{
+  "selection_rule": "10 trang nội dung đầu tiên theo thứ tự vật lý; trên mỗi trang chọn đoạn có nhiều ký tự nhất (hòa thì lấy đoạn sớm hơn).",
+  "frozen_before_scoring": true,
+  "sample_count": 10,
+  "samples": [
+    {
+      "sample_id": "C01",
+      "physical_page": 1,
+      "printed_page": 3,
+      "paragraph_chars": 182
+    },
+    {
+      "sample_id": "C02",
+      "physical_page": 2,
+      "printed_page": 4,
+      "paragraph_chars": 281
+    },
+    {
+      "sample_id": "C03",
+      "physical_page": 3,
+      "printed_page": 5,
+      "paragraph_chars": 451
+    },
+    {
+      "sample_id": "C04",
+      "physical_page": 4,
+      "printed_page": 6,
+      "paragraph_chars": 403
+    },
+    {
+      "sample_id": "C05",
+      "physical_page": 5,
+      "printed_page": 7,
+      "paragraph_chars": 261
+    },
+    {
+      "sample_id": "C06",
+      "physical_page": 6,
+      "printed_page": 8,
+      "paragraph_chars": 219
+    },
+    {
+      "sample_id": "C07",
+      "physical_page": 7,
+      "printed_page": 9,
+      "paragraph_chars": 166
+    },
+    {
+      "sample_id": "C08",
+      "physical_page": 8,
+      "printed_page": 10,
+      "paragraph_chars": 270
+    },
+    {
+      "sample_id": "C09",
+      "physical_page": 9,
+      "printed_page": 11,
+      "paragraph_chars": 241
+    },
+    {
+      "sample_id": "C10",
+      "physical_page": 10,
+      "printed_page": 12,
+      "paragraph_chars": 390
+    }
+  ],
+  "scoring": "0 = cắt giữa ý/thiếu chủ thể; 1 = hiểu một phần; 2 = tự hiểu được, trọn ý.",
+  "generated_at": "2026-11-14T07:54:17+00:00",
+  "generator": "starter/scripts/pick_coherence_samples.py"
+}

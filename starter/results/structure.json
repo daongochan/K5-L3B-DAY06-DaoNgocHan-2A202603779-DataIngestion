@@ -1,0 +1,455 @@
+{
+  "document_id": "nghi-dinh-13-2023-nd-cp",
+  "chapters": [
+    {
+      "chapter": "Chương I",
+      "physical_page": 1,
+      "printed_page": 3
+    },
+    {
+      "chapter": "Chương II",
+      "physical_page": 7,
+      "printed_page": 9
+    },
+    {
+      "chapter": "Chương III",
+      "physical_page": 25,
+      "printed_page": 27
+    },
+    {
+      "chapter": "Chương IV",
+      "physical_page": 29,
+      "printed_page": 31
+    }
+  ],
+  "sections": [
+    {
+      "section": "Mục 1",
+      "chapter": "Chương II",
+      "physical_page": 7,
+      "printed_page": 9
+    },
+    {
+      "section": "Mục 2",
+      "chapter": "Chương II",
+      "physical_page": 9,
+      "printed_page": 11
+    },
+    {
+      "section": "Mục 3",
+      "chapter": "Chương II",
+      "physical_page": 19,
+      "printed_page": 21
+    },
+    {
+      "section": "Mục 4",
+      "chapter": "Chương II",
+      "physical_page": 23,
+      "printed_page": 25
+    }
+  ],
+  "articles": [
+    {
+      "article": "Điều 1",
+      "article_number": 1,
+      "title": "Phạm vi điều chỉnh và đối tượng áp dụng",
+      "chapter": "Chương I",
+      "section": null,
+      "physical_page": 1,
+      "printed_page": 3
+    },
+    {
+      "article": "Điều 2",
+      "article_number": 2,
+      "title": "Giải thích từ ngữ",
+      "chapter": "Chương I",
+      "section": null,
+      "physical_page": 2,
+      "printed_page": 4
+    },
+    {
+      "article": "Điều 3",
+      "article_number": 3,
+      "title": "Nguyên tắc bảo vệ dữ liệu cá nhân",
+      "chapter": "Chương I",
+      "section": null,
+      "physical_page": 5,
+      "printed_page": 7
+    },
+    {
+      "article": "Điều 4",
+      "article_number": 4,
+      "title": "Xử lý vi phạm quy định bảo vệ dữ liệu cá nhân",
+      "chapter": "Chương I",
+      "section": null,
+      "physical_page": 5,
+      "printed_page": 7
+    },
+    {
+      "article": "Điều 5",
+      "article_number": 5,
+      "title": "Quản lý nhà nước về bảo vệ dữ liệu cá nhân",
+      "chapter": "Chương I",
+      "section": null,
+      "physical_page": 5,
+      "printed_page": 7
+    },
+    {
+      "article": "Điều 6",
+      "article_number": 6,
+      "title": "Áp dụng Nghị định bảo vệ dữ liệu cá nhân, các luật liên quan và Điều ước quốc tế",
+      "chapter": "Chương I",
+      "section": null,
+      "physical_page": 6,
+      "printed_page": 8
+    },
+    {
+      "article": "Điều 7",
+      "article_number": 7,
+      "title": "Hợp tác quốc tế về bảo vệ dữ liệu cá nhân",
+      "chapter": "Chương I",
+      "section": null,
+      "physical_page": 6,
+      "printed_page": 8
+    },
+    {
+      "article": "Điều 8",
+      "article_number": 8,
+      "title": "Hành vi bị nghiêm cấm",
+      "chapter": "Chương I",
+      "section": null,
+      "physical_page": 7,
+      "printed_page": 9
+    },
+    {
+      "article": "Điều 9",
+      "article_number": 9,
+      "title": "Quyền của chủ thể dữ liệu",
+      "chapter": "Chương II",
+      "section": "Mục 1",
+      "physical_page": 7,
+      "printed_page": 9
+    },
+    {
+      "article": "Điều 10",
+      "article_number": 10,
+      "title": "Nghĩa vụ của chủ thể dữ liệu",
+      "chapter": "Chương II",
+      "section": "Mục 1",
+      "physical_page": 9,
+      "printed_page": 11
+    },
+    {
+      "article": "Điều 11",
+      "article_number": 11,
+      "title": "Sự đồng ý của chủ thể dữ liệu",
+      "chapter": "Chương II",
+      "section": "Mục 2",
+      "physical_page": 9,
+      "printed_page": 11
+    },
+    {
+      "article": "Điều 12",
+      "article_number": 12,
+      "title": "Rút lại sự đồng ý",
+      "chapter": "Chương II",
+      "section": "Mục 2",
+      "physical_page": 10,
+      "printed_page": 12
+    },
+    {
+      "article": "Điều 13",
+      "article_number": 13,
+      "title": "Thông báo xử lý dữ liệu cá nhân",
+      "chapter": "Chương II",
+      "section": "Mục 2",
+      "physical_page": 11,
+      "printed_page": 13
+    },
+    {
+      "article": "Điều 14",
+      "article_number": 14,
+      "title": "Cung cấp dữ liệu cá nhân",
+      "chapter": "Chương II",
+      "section": "Mục 2",
+      "physical_page": 11,
+      "printed_page": 13
+    },
+    {
+      "article": "Điều 15",
+      "article_number": 15,
+      "title": "Chỉnh sửa dữ liệu cá nhân",
+      "chapter": "Chương II",
+      "section": "Mục 2",
+      "physical_page": 13,
+      "printed_page": 15
+    },
+    {
+      "article": "Điều 16",
+      "article_number": 16,
+      "title": "Lưu trữ, xóa, hủy dữ liệu cá nhân",
+      "chapter": "Chương II",
+      "section": "Mục 2",
+      "physical_page": 14,
+      "printed_page": 16
+    },
+    {
+      "article": "Điều 17",
+      "article_number": 17,
+      "title": "Xử lý dữ liệu cá nhân trong trường hợp không cần sự đồng ý của chủ thể dữ liệu",
+      "chapter": "Chương II",
+      "section": "Mục 2",
+      "physical_page": 15,
+      "printed_page": 17
+    },
+    {
+      "article": "Điều 18",
+      "article_number": 18,
+      "title": "Xử lý dữ liệu cá nhân thu được từ hoạt động ghi âm, ghi hình tại nơi công cộng",
+      "chapter": "Chương II",
+      "section": "Mục 2",
+      "physical_page": 16,
+      "printed_page": 18
+    },
+    {
+      "article": "Điều 19",
+      "article_number": 19,
+      "title": "Xử lý dữ liệu cá nhân của người bị tuyên bố mất tích, đã chết",
+      "chapter": "Chương II",
+      "section": "Mục 2",
+      "physical_page": 16,
+      "printed_page": 18
+    },
+    {
+      "article": "Điều 20",
+      "article_number": 20,
+      "title": "Xử lý dữ liệu cá nhân của trẻ em",
+      "chapter": "Chương II",
+      "section": "Mục 2",
+      "physical_page": 16,
+      "printed_page": 18
+    },
+    {
+      "article": "Điều 21",
+      "article_number": 21,
+      "title": "Bảo vệ dữ liệu cá nhân trong kinh doanh dịch vụ tiếp thị, giới thiệu sản phẩm quảng cáo",
+      "chapter": "Chương II",
+      "section": "Mục 2",
+      "physical_page": 17,
+      "printed_page": 19
+    },
+    {
+      "article": "Điều 22",
+      "article_number": 22,
+      "title": "Thu thập, chuyển giao, mua, bán trái phép dữ liệu cá nhân",
+      "chapter": "Chương II",
+      "section": "Mục 2",
+      "physical_page": 17,
+      "printed_page": 19
+    },
+    {
+      "article": "Điều 23",
+      "article_number": 23,
+      "title": "Thông báo vi phạm quy định về bảo vệ dữ liệu cá nhân",
+      "chapter": "Chương II",
+      "section": "Mục 2",
+      "physical_page": 18,
+      "printed_page": 20
+    },
+    {
+      "article": "Điều 24",
+      "article_number": 24,
+      "title": "Đánh giá tác động xử lý dữ liệu cá nhân",
+      "chapter": "Chương II",
+      "section": "Mục 3",
+      "physical_page": 19,
+      "printed_page": 21
+    },
+    {
+      "article": "Điều 25",
+      "article_number": 25,
+      "title": "Chuyển dữ liệu cá nhân ra nước ngoài",
+      "chapter": "Chương II",
+      "section": "Mục 3",
+      "physical_page": 21,
+      "printed_page": 23
+    },
+    {
+      "article": "Điều 26",
+      "article_number": 26,
+      "title": "Biện pháp bảo vệ dữ liệu cá nhân",
+      "chapter": "Chương II",
+      "section": "Mục 4",
+      "physical_page": 23,
+      "printed_page": 25
+    },
+    {
+      "article": "Điều 27",
+      "article_number": 27,
+      "title": "Bảo vệ dữ liệu cá nhân cơ bản",
+      "chapter": "Chương II",
+      "section": "Mục 4",
+      "physical_page": 23,
+      "printed_page": 25
+    },
+    {
+      "article": "Điều 28",
+      "article_number": 28,
+      "title": "Bảo vệ dữ liệu cá nhân nhạy cảm",
+      "chapter": "Chương II",
+      "section": "Mục 4",
+      "physical_page": 23,
+      "printed_page": 25
+    },
+    {
+      "article": "Điều 29",
+      "article_number": 29,
+      "title": "Cơ quan chuyên trách bảo vệ dữ liệu cá nhân và Cổng thông tin quốc gia về bảo vệ dữ liệu cá nhân",
+      "chapter": "Chương II",
+      "section": "Mục 4",
+      "physical_page": 24,
+      "printed_page": 26
+    },
+    {
+      "article": "Điều 30",
+      "article_number": 30,
+      "title": "Điều kiện bảo đảm hoạt động bảo vệ dữ liệu cá nhân",
+      "chapter": "Chương II",
+      "section": "Mục 4",
+      "physical_page": 24,
+      "printed_page": 26
+    },
+    {
+      "article": "Điều 31",
+      "article_number": 31,
+      "title": "Kinh phí bảo đảm hoạt động bảo vệ dữ liệu cá nhân",
+      "chapter": "Chương II",
+      "section": "Mục 4",
+      "physical_page": 25,
+      "printed_page": 27
+    },
+    {
+      "article": "Điều 32",
+      "article_number": 32,
+      "title": "Trách nhiệm của Bộ Công an",
+      "chapter": "Chương III",
+      "section": "Mục 4",
+      "physical_page": 25,
+      "printed_page": 27
+    },
+    {
+      "article": "Điều 33",
+      "article_number": 33,
+      "title": "Trách nhiệm của Bộ Thông tin và Truyền thông",
+      "chapter": "Chương III",
+      "section": "Mục 4",
+      "physical_page": 26,
+      "printed_page": 28
+    },
+    {
+      "article": "Điều 34",
+      "article_number": 34,
+      "title": "Trách nhiệm của Bộ Quốc phòng",
+      "chapter": "Chương III",
+      "section": "Mục 4",
+      "physical_page": 26,
+      "printed_page": 28
+    },
+    {
+      "article": "Điều 35",
+      "article_number": 35,
+      "title": "Trách nhiệm của Bộ Khoa học và Công nghệ",
+      "chapter": "Chương III",
+      "section": "Mục 4",
+      "physical_page": 26,
+      "printed_page": 28
+    },
+    {
+      "article": "Điều 36",
+      "article_number": 36,
+      "title": "Trách nhiệm của bộ, cơ quan ngang bộ, cơ quan thuộc Chính phủ",
+      "chapter": "Chương III",
+      "section": "Mục 4",
+      "physical_page": 27,
+      "printed_page": 29
+    },
+    {
+      "article": "Điều 37",
+      "article_number": 37,
+      "title": "Trách nhiệm của Ủy ban nhân dân các tỉnh, thành phố trực thuộc Trung ương",
+      "chapter": "Chương III",
+      "section": "Mục 4",
+      "physical_page": 27,
+      "printed_page": 29
+    },
+    {
+      "article": "Điều 38",
+      "article_number": 38,
+      "title": "Trách nhiệm của Bên Kiểm soát dữ liệu cá nhân",
+      "chapter": "Chương III",
+      "section": "Mục 4",
+      "physical_page": 27,
+      "printed_page": 29
+    },
+    {
+      "article": "Điều 39",
+      "article_number": 39,
+      "title": "Trách nhiệm của Bên Xử lý dữ liệu cá nhân",
+      "chapter": "Chương III",
+      "section": "Mục 4",
+      "physical_page": 28,
+      "printed_page": 30
+    },
+    {
+      "article": "Điều 40",
+      "article_number": 40,
+      "title": "Trách nhiệm của Bên Kiểm soát và xử lý dữ liệu",
+      "chapter": "Chương III",
+      "section": "Mục 4",
+      "physical_page": 28,
+      "printed_page": 30
+    },
+    {
+      "article": "Điều 41",
+      "article_number": 41,
+      "title": "Trách nhiệm của Bên thứ Ba",
+      "chapter": "Chương III",
+      "section": "Mục 4",
+      "physical_page": 28,
+      "printed_page": 30
+    },
+    {
+      "article": "Điều 42",
+      "article_number": 42,
+      "title": "Trách nhiệm của tổ chức, cá nhân có liên quan",
+      "chapter": "Chương III",
+      "section": "Mục 4",
+      "physical_page": 28,
+      "printed_page": 30
+    },
+    {
+      "article": "Điều 43",
+      "article_number": 43,
+      "title": "Hiệu lực thi hành",
+      "chapter": "Chương IV",
+      "section": "Mục 4",
+      "physical_page": 29,
+      "printed_page": 31
+    },
+    {
+      "article": "Điều 44",
+      "article_number": 44,
+      "title": "Trách nhiệm thi hành",
+      "chapter": "Chương IV",
+      "section": "Mục 4",
+      "physical_page": 29,
+      "printed_page": 31
+    }
+  ],
+  "article_count": 44,
+  "articles_contiguous_from_1": true,
+  "missing_article_numbers": [],
+  "duplicate_article_numbers": [],
+  "generated_at": "2026-11-14T07:54:09+00:00",
+  "generator": "starter/scripts/extract_structure.py"
+}

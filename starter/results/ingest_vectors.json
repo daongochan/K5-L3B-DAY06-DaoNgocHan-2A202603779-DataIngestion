@@ -1,0 +1,61 @@
+{
+  "embedding": {
+    "provider": "sentence-transformers (local, CPU)",
+    "model_name": "intfloat/multilingual-e5-base",
+    "dimensions": 768,
+    "document_prefix": "passage: ",
+    "query_prefix": "query: ",
+    "normalized": true,
+    "library_versions": {
+      "sentence-transformers": "6.3.0",
+      "torch": "2.15.0",
+      "numpy": "2.5.4",
+      "psycopg": "3.3.8",
+      "pgvector": "0.5.1"
+    }
+  },
+  "vector_store": {
+    "engine": "PostgreSQL + pgvector (Docker Compose, project day6_student_starter)",
+    "table": "chunks",
+    "metric": "cosine",
+    "operator": "<=>",
+    "index_type": "exact scan (sequential) — corpus has ~200 chunks, ANN would add approximation error for no real gain",
+    "dimensions": 768,
+    "filter_columns": [
+      "document_id",
+      "page",
+      "printed_page",
+      "page_type",
+      "article",
+      "chapter",
+      "section"
+    ]
+  },
+  "cost": {
+    "api_cost_usd": 0.0,
+    "note": "Model chạy local trên CPU, không gọi API trả phí."
+  },
+  "timings_second_pass": {
+    "A_fixed": {
+      "chunks": 199,
+      "embed_seconds": 40.8,
+      "write_seconds": 0.91,
+      "rows_in_store_after_second_pass": 199,
+      "duplicate_rows": 0,
+      "written": 199,
+      "deleted_stale": 0
+    },
+    "B_para": {
+      "chunks": 136,
+      "embed_seconds": 35.15,
+      "write_seconds": 1.47,
+      "rows_in_store_after_second_pass": 136,
+      "duplicate_rows": 0,
+      "written": 136,
+      "deleted_stale": 0
+    }
+  },
+  "total_seconds": 194.1,
+  "generated_at": "2026-11-14T07:57:33+00:00",
+  "generator": "starter/scripts/ingest_vectors.py"
+}

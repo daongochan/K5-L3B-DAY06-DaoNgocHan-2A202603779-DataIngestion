@@ -1,0 +1,25 @@
+{
+  "note": "Coverage = có ít nhất một chunk chứa trọn chuỗi evidence. Đây là trần lý thuyết, không phải Hit@k: một chunk có thể chứa evidence nhưng vẫn không được xếp hạng trong top-3.",
+  "strategies": {
+    "A_fixed": {
+      "chunks": 199,
+      "dev_covered": 16,
+      "dev_total": 16,
+      "test_covered": 6,
+      "test_total": 6,
+      "missing": [],
+      "avg_chunks_per_gold_evidence": 1.32
+    },
+    "B_para": {
+      "chunks": 136,
+      "dev_covered": 16,
+      "dev_total": 16,
+      "test_covered": 6,
+      "test_total": 6,
+      "missing": [],
+      "avg_chunks_per_gold_evidence": 1.09
+    }
+  },
+  "generated_at": "2026-11-14T08:30:15+00:00",
+  "generator": "starter/scripts/check_chunk_coverage.py"
+}

@@ -1,0 +1,19 @@
+strategy,question_id,grounding,reason
+A_fixed,T01,2,top-1 chứa trọn khoản 10 Điều 9 về quyền yêu cầu bồi thường.
+A_fixed,T02,1,"top-1 chứa khoản 2 Điều 16 nhưng bị cắt sau điểm b, thiếu điểm c 'đã được công khai' là điều kiện trả lời trực tiếp."
+A_fixed,T03,1,"top-2 đúng trang 28 và có tiêu đề Điều 39 cùng khoản 1-2, nhưng thiếu khoản 5 'xóa, trả lại toàn bộ dữ liệu'."
+A_fixed,T04,2,top-1 chứa tiêu đề 'HỒ SƠ ĐÁNH GIÁ TÁC ĐỘNG CHUYỂN DỮ LIỆU CÁ NHÂN RA NƯỚC NGOÀI' của Mẫu số 06.
+A_fixed,T05,2,top-1 chứa khoản 7 Điều 25 nêu rõ 01 lần/năm kèm ngoại lệ.
+A_fixed,T06,2,top-1 chứa tiêu đề Điều 38 và khoản 2 về nhật ký hệ thống.
+B_para,T01,2,"top-1 chứa trọn khoản 10 Điều 9, có breadcrumb Điều 9 nên tự hiểu."
+B_para,T02,2,top-1 chứa trọn khoản 2 Điều 16 gồm cả điểm c 'đã được công khai' — đúng điều kiện cần.
+B_para,T03,2,"top-1 chứa trọn Điều 39 gồm khoản 5 'xóa, trả lại toàn bộ dữ liệu', breadcrumb ghi Điều 39."
+B_para,T04,2,top-1 là Mẫu số 06 với tiêu đề hồ sơ chuyển dữ liệu ra nước ngoài.
+B_para,T05,2,top-1 chứa trọn khoản 7 Điều 25 về 01 lần/năm.
+B_para,T06,2,"top-1 chứa Điều 38 và khoản 2 về nhật ký, breadcrumb Điều 38."
+C_para_filter,T01,2,giống B: khoản 10 Điều 9 trọn vẹn.
+C_para_filter,T02,2,giống B: khoản 2 Điều 16 trọn vẹn.
+C_para_filter,T03,2,"giống B: Điều 39 trọn vẹn, có khoản 5."
+C_para_filter,T04,2,top-1 là Mẫu số 06; filter page_type loại hẳn trang quy định nên top-3 toàn biểu mẫu.
+C_para_filter,T05,2,giống B: khoản 7 Điều 25 trọn vẹn.
+C_para_filter,T06,2,top-1 Điều 38 khoản 2; filter article bảo đảm cả 3 kết quả thuộc Điều 38.

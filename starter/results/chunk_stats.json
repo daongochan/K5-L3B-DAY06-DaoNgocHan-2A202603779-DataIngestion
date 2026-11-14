@@ -1,0 +1,65 @@
+{
+  "document_id": "nghi-dinh-13-2023-nd-cp",
+  "corpus_sha256": "5b026143b56779199603a164260cc76533a816b9c851a4c769e16a55ef7d6e6f",
+  "parameters": {
+    "A_fixed": {
+      "size": 500,
+      "overlap": 150
+    },
+    "B_para": {
+      "max_size": 700,
+      "breadcrumb": true,
+      "heading_aligned": true
+    }
+  },
+  "parameter_rationale": {
+    "A_fixed": "500 ký tự chứa trọn một khoản kèm ngữ cảnh; overlap 150 (30%) là mức nhỏ nhất không làm mất evidence nào trên dev (50 → 13/16; 100 → 15/16; 150 → 16/16; 200 → 16/16 nhưng thêm 23 chunk mà không thêm lợi ích).",
+    "B_para": "700 ký tự xấp xỉ độ dài trung bình của một điều trong corpus này, giữ số chunk gần A để so sánh A–B không bị nhiễu bởi chênh lệch kích thước index.",
+    "comparison": "A–B chỉ khác cách chunk; model, store, metric, corpus và benchmark giữ nguyên."
+  },
+  "excluded_pages": [
+    30
+  ],
+  "strategies": {
+    "A_fixed": {
+      "strategy": "A_fixed",
+      "chunks": 199,
+      "chars_total": 91666,
+      "chars_mean": 460.6,
+      "chars_median": 497,
+      "chars_min": 160,
+      "chars_max": 500,
+      "chars_stdev": 86.4,
+      "body_chars_mean": 460.6,
+      "chunks_under_100_chars": 0,
+      "pages_covered": 36,
+      "pages_expected": 36,
+      "pages_missing": [],
+      "distinct_articles": 41,
+      "chunks_without_article": 50,
+      "chunks_without_page": 0,
+      "chunks_without_source": 0
+    },
+    "B_para": {
+      "strategy": "B_para",
+      "chunks": 136,
+      "chars_total": 71701,
+      "chars_mean": 527.2,
+      "chars_median": 607.5,
+      "chars_min": 133,
+      "chars_max": 808,
+      "chars_stdev": 184.7,
+      "body_chars_mean": 490.0,
+      "chunks_under_100_chars": 0,
+      "pages_covered": 36,
+      "pages_expected": 36,
+      "pages_missing": [],
+      "distinct_articles": 44,
+      "chunks_without_article": 27,
+      "chunks_without_page": 0,
+      "chunks_without_source": 0
+    }
+  },
+  "generated_at": "2026-11-14T07:54:15+00:00",
+  "generator": "starter/scripts/export_chunks.py"
+}
